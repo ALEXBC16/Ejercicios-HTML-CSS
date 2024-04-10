@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+            <li>
+                <label for="name">Nombre:<br></label>
+                <input type="text" id="name" name="user_name" placeholder="Paco"/>
+            </li>
+            <li>
+                <label for="surnames">Apellidos:<br></label>
+                <input type="text" id="surnames" name="user_surnames" placeholder="Fernandez Garcia"/>
+            </li>
+            <li>
+                <label for="location">Direccion:<br></label>
+                <ul>
+                    <li>
+                        <label for="type">Tipo de via:<br></label>
+                        <select name="type" id="user_type">
+                            <option value="calle">Calle</option>
+                            <option value="ronda">Ronda</option>
+                            <option value="avenida">avenida</option>
+                        </select>                
+                    </li>
+                    <li>
+                        <label for="road_name">Nombre de la via:<br></label>
+                        <input type="text" id="name_road" name="user_name_road" placeholder="Juana de vega"/>
+                    </li>
+                    <li>
+                        <label for="road_num">Codigo postal:<br></label>
+                        <input type="number" id="num_road" name="user_num_road" placeholder="15011"/>
+                    </li>
+                    <li>
+                        <label for="city">Ciudad:<br></label>
+                        <input type="text" id="city" name="user_city" placeholder="A Coruña"/>
+                    </li>
+                    <li>
+                        <label for="province">Provincia:<br></label>
+                        <input type="text" id="rovince" name="user_province" placeholder="Coruña"/>
+                    </li>
+                    <li>
+                        <label for="country">Pais:<br></label>
+                        <input type="text" id="country" name="user_country" placeholder="España"/>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <label for="birth_date">Fecha de nacimiento:<br></label>
+                <input type="date" id="start" name="trip-start" value="1900-01-01" min="1900-01-01"/>
+            </li>
+            <li>
+                <label for="avg_grade">Nota media en la universidad:<br></label>
+                <input type="number" id="avg_grade" name="user_avg_grade" placeholder="9.85">
+            </li>
+            <li>
+                <label for="number">Numero de telefono:<br></label>
+                <input type="tel" name="number" id="user_number" placeholder="678123456">
+            </li>
+            <li>
+                <label for="mail">Correo electrónico:<br></label>
+                <input type="email" id="mail" name="user_mail" placeholder="ejemplo@correo.com"/>
+            </li>
+            <li>
+                <label for="password">Contraseña:<br></label>
+                <input type="text" id="password" name="user_password" placeholder="123456789.Abc"/>
+            </li>
+            <li>
+                <label for="password_again">Repetir contraseña:<br></label>
+                <input type="text" id="pasword_again" name="user_password_again" placeholder="123456789.Abc"/>
+            </li>
+            <li>
+                <label for="country">Pais:<br></label>
+                    <select name="country" id="user_country">
+                        <option value="spain">España</option>
+                        <option value="france">Francia</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="andorra">Andorra</option>
+                    </select> 
+            </li>
+            <li>
+                <label for="count_type">Tipo de cuenta:<br></label>
+                    <select name="count_type" id="user_count_type">
+                        <option value="free">Gratuita</option>
+                        <option value="basic">Basica</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                    <ul>
+                        <li>
+                            <label for="free">Gratuita: es gratuita con las opciones minimas</label>
+                        </li>
+                        <li>
+                            <label for="basic">Basica: importe bajo con alguna funcionalidad extra</label>
+                        </li>
+                        <li>
+                            <label for="premium">Premium: precio superior pero con todas las funcionalidades</label>
+                        </li>
+                    </ul>
+            </li>
+            <li>
+                <label for="something">Algo sobre mi:<br></label>
+                <input type="text" id="something" name="something" placeholder="Me gustan los perros">
+            </li>
+            <li>
+                <label for="profilePic">Seleccionar imagen de perfil:</label><br>
+                <input type="file" id="profilePic" name="user_profile_pic" accept="image/*"><br><br>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>
