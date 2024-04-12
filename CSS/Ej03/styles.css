@@ -27,32 +27,21 @@
     cursor: crosshair; /* Cambiar el cursor */
 }
 
-/* Colores de fondo para los grupos de divs */
-#square-divs-row {
-    background-color: lightblue;
-}
-#rectangle-divs-row {
-    background-color: gold;
-}
-#rounded-divs-row {
-    background-color: lightgreen;
-}
-
 /* Cambiar el puntero en los divs */
 .square-divs:hover,
 .rounded-divs:hover {
     transform: scale(1.1); /* Aumentar ligeramente el tamaño al pasar el ratón */
 }
 
-body {
-    font-family: Arial, sans-serif;
+.grid-table {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    background-color: black;
+    grid-gap: 10px;
 }
 
-/* Estilos para los divs rectangulares */
-.rectangular {
-    border-radius: 0; /* Bordes rectangulares */
-}
-
-.divs-row {
-    margin: 20px; /* Espacio entre filas */
+.header {
+    display: grid;
+    background-color: lightgray;
 }
