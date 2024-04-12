@@ -1,0 +1,58 @@
+/* Estilos para los divs cuadrados */
+.square-divs {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor */
+}
+
+/* Estilos para los divs rectangulares */
+.rectangle-divs {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    cursor: help; /* Cambiar el cursor */
+}
+
+/* Estilos para los divs redondos */
+.rounded-divs {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%; /* Bordes completamente redondos */
+    cursor: crosshair; /* Cambiar el cursor */
+}
+
+/* Colores de fondo para los grupos de divs */
+#square-divs-row {
+    background-color: lightblue;
+}
+#rectangle-divs-row {
+    background-color: gold;
+}
+#rounded-divs-row {
+    background-color: lightgreen;
+}
+
+/* Cambiar el puntero en los divs */
+.square-divs:hover,
+.rounded-divs:hover {
+    transform: scale(1.1); /* Aumentar ligeramente el tamaño al pasar el ratón */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para los divs rectangulares */
+.rectangular {
+    border-radius: 0; /* Bordes rectangulares */
+}
+
+.divs-row {
+    margin-bottom: 20px; /* Espacio entre filas */
+}
