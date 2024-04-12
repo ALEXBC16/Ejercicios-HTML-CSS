@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario y Tabla</title>
+</head>
+<body>
+    <h2>Formulario</h2>
+    <form onsubmit="guardarRegistro(event)">
+        <ul>
+            <li>
+                <label for="user_name">Nombre:<br></label>
+                <input type="text" id="user_name" name="user_name" placeholder="Paco" required/>
+            </li>
+            <li>
+                <label for="user_surnames">Apellidos:<br></label>
+                <input type="text" id="user_surnames" name="user_surnames" placeholder="Fernandez Garcia"required/>
+            </li>
+            <li>
+                <label for="location">Direccion:<br></label>
+                <ul>
+                    <li>
+                        <label for="user_type">Tipo de via:<br></label>
+                        <select name="user_type" id="user_type">
+                            <option value="calle">Calle</option>
+                            <option value="ronda">Ronda</option>
+                            <option value="avenida">avenida</option>
+                        </select>                
+                    </li>
+                    <li>
+                        <label for="user_name_road">Nombre de la via:<br></label>
+                        <input type="text" id="user_name_road" name="user_name_road" placeholder="Juana de vega"/>
+                    </li>
+                    <li>
+                        <label for="user_num_road">Codigo postal:<br></label>
+                        <input type="number" id="user_num_road" name="user_num_road" placeholder="15011"/>
+                    </li>
+                    <li>
+                        <label for="user_city">Ciudad:<br></label>
+                        <input type="text" id="user_city" name="user_city" placeholder="A Coruña"/>
+                    </li>
+                    <li>
+                        <label for="user_province">Provincia:<br></label>
+                        <input type="text" id="user_province" name="user_province" placeholder="Coruña"/>
+                    </li>
+                    <li>
+                        <label for="user_country_1">Pais:<br></label>
+                        <input type="text" id="user_country_1" name="user_country_1" placeholder="España"/>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <label for="birth_date">Fecha de nacimiento:<br></label>
+                <input type="date" id="birth_date" name="birth_date" value="1900-01-01" min="1900-01-01"required/>
+            </li>
+            <li>
+                <label for="user_avg_grade">Nota media en la universidad:<br></label>
+                <input type="number" id="user_avg_grade" name="user_avg_grade" placeholder="9.85">
+            </li>
+            <li>
+                <label for="user_number">Numero de telefono:<br></label>
+                <input type="tel" name="user_number" id="user_number" placeholder="678123456">
+            </li>
+            <li>
+                <label for="user_mail">Correo electrónico:<br></label>
+                <input type="email" id="user_mail" name="user_mail" placeholder="ejemplo@correo.com"/>
+            </li>
+            <li>
+                <label for="user_password">Contraseña:<br></label>
+                <input type="text" id="user_password" name="user_password" placeholder="123456789.Abc"required/>
+            </li>
+            <li>
+                <label for="user_password_again">Repetir contraseña:<br></label>
+                <input type="text" id="user_password_again" name="user_password_again" placeholder="123456789.Abc"required/>
+            </li>
+            <li>
+                <label for="user_country_2">Pais:<br></label>
+                    <select name="user_country_2" id="user_country_2">
+                        <option value="spain">España</option>
+                        <option value="france">Francia</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="andorra">Andorra</option>
+                    </select> 
+            </li>
+            <li>
+                <label for="user_count_type">Tipo de cuenta:<br></label>
+                    <select name="user_count_type" id="user_count_type">
+                        <option value="Gratuita">Gratuita</option>
+                        <option value="Basica">Basica</option>
+                        <option value="Premium">Premium</option>
+                    </select>
+                    <ul>
+                        <li>
+                            <label for="free">Gratuita: es gratuita con las opciones minimas</label>
+                        </li>
+                        <li>
+                            <label for="basic">Basica: importe bajo con alguna funcionalidad extra</label>
+                        </li>
+                        <li>
+                            <label for="premium">Premium: precio superior pero con todas las funcionalidades</label>
+                        </li>
+                    </ul>
+            </li>
+            <li>
+                <label for="something">Algo sobre mi:<br></label>
+                <input type="text" id="something" name="something" placeholder="Me gustan los perros">
+            </li>
+            <li>
+                <label for="user_profile_pic">Seleccionar imagen de perfil:</label><br>
+                <input type="file" id="user_profile_pic" name="user_profile_pic" accept="image/*"><br>
+            </li>
+            <li>
+                <label for="user_cv">CV:</label><br>
+                <input type="file" id="user_cv" name="user_cv" accept=".pdf"><br><br>
+            </li>
+            <input type="submit" value="Enviar">
+        </ul>
+    </form>
+
+    <h2>Registros Guardados</h2>
+    <table id="tablaRegistros" border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Dirección</th>
+                <th>Numero de telefono</th>
+                <th>Tipo de cuenta</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+            <!-- Aquí se agregarán las filas de datos -->
+        </tbody>
+    </table>
+
+    <script>
+        function guardarRegistro(event) {
+            event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+
+            // Obtener los valores de los campos del formulario
+            var nombre = document.getElementById("user_name").value;
+            var apellidos = document.getElementById("user_surnames").value;
+            var direccion = document.getElementById("user_type").value + " " + document.getElementById("user_name_road").value + " " + document.getElementById("user_num_road").value + ", " + document.getElementById("user_city").value + ", " + document.getElementById("user_province").value + ", " + document.getElementById("user_country_1").value;
+            var numero = document.getElementById("user_number").value;
+            var type_count = document.getElementById("user_count_type").value;
+
+            // Crear una nueva fila en la tabla con los datos del formulario
+            var fila = document.createElement("tr");
+            fila.innerHTML = "<td>" + nombre + "</td><td>" + apellidos + "</td><td>" + direccion + "</td><td>" + numero + "</td><td>" + type_count + "</td>";
+
+            // Agregar la fila a la tabla
+            var tabla = document.getElementById("cuerpoTabla");
+            tabla.appendChild(fila);
+
+            // Limpiar los campos del formulario después de guardar
+            document.getElementById("user_name").value = "";
+            document.getElementById("user_surnames").value = "";
+            document.getElementById("user_type").value = "";
+            document.getElementById("user_name_road").value = "";
+            document.getElementById("user_num_road").value = "";
+            document.getElementById("user_city").value = "";
+            document.getElementById("user_province").value = "";
+            document.getElementById("user_country_2").value = "";
+            document.getElementById("user_number").value = "";
+            document.getElementById("user_count_type").value = "";
+        }
+    </script>
+</body>
+</html>
