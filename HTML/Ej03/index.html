@@ -6,15 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/my-handling-form-page" method="post">
+    <form action="confirmado.html" method="get">
         <ul>
             <li>
                 <label for="name">Nombre:<br></label>
-                <input type="text" id="name" name="user_name" placeholder="Paco"/>
+                <input type="text" id="name" name="user_name" placeholder="Paco" required/>
             </li>
             <li>
                 <label for="surnames">Apellidos:<br></label>
-                <input type="text" id="surnames" name="user_surnames" placeholder="Fernandez Garcia"/>
+                <input type="text" id="surnames" name="user_surnames" placeholder="Fernandez Garcia"required/>
             </li>
             <li>
                 <label for="location">Direccion:<br></label>
@@ -51,7 +51,7 @@
             </li>
             <li>
                 <label for="birth_date">Fecha de nacimiento:<br></label>
-                <input type="date" id="start" name="trip-start" value="1900-01-01" min="1900-01-01"/>
+                <input type="date" id="start" name="trip-start" value="1900-01-01" min="1900-01-01"required/>
             </li>
             <li>
                 <label for="avg_grade">Nota media en la universidad:<br></label>
@@ -67,11 +67,11 @@
             </li>
             <li>
                 <label for="password">Contraseña:<br></label>
-                <input type="text" id="password" name="user_password" placeholder="123456789.Abc"/>
+                <input type="text" id="password" name="user_password" placeholder="123456789.Abc"required/>
             </li>
             <li>
                 <label for="password_again">Repetir contraseña:<br></label>
-                <input type="text" id="pasword_again" name="user_password_again" placeholder="123456789.Abc"/>
+                <input type="text" id="pasword_again" name="user_password_again" placeholder="123456789.Abc"required/>
             </li>
             <li>
                 <label for="country">Pais:<br></label>
@@ -107,9 +107,15 @@
             </li>
             <li>
                 <label for="profilePic">Seleccionar imagen de perfil:</label><br>
-                <input type="file" id="profilePic" name="user_profile_pic" accept="image/*"><br><br>
+                <input type="file" id="profilePic" name="user_profile_pic" accept="image/*"><br>
             </li>
+            <li>
+                <label for="cv">CV:</label><br>
+                <input type="file" id="cv" name="user_cv" accept=".pdf"><br><br>
+            </li>
+            <input type="submit" value="Enviar">
         </ul>
     </form>
+    
 </body>
 </html>
